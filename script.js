@@ -61,33 +61,42 @@ function showToast(msg, isError) {
 }
 
 // ---------- Contact form ----------
-document.getElementById("contact-form").addEventListener("submit", (e) => {
+document.getElementById("contact-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const phone = document.getElementById("phone").value.trim();
   const message = document.getElementById("message").value.trim();
 
-  // validate fields
   if (!name || !message) {
-    e.preventDefault();
     showToast("Ju lutemi plotësoni emrin dhe mesazhin.", true);
     return;
   }
 
   if (!email && !phone) {
-    e.preventDefault();
     showToast("Plotësoni email ose numrin e telefonit.", true);
     return;
   }
 
   if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    e.preventDefault();
     showToast("Email i pavlefshëm.", true);
     return;
   }
 
-  // ❗ MOS e ndal submit nëse gjithçka është OK
-  showToast("Duke dërguar mesazhin...");
+  const formData = new FormData(e.target);
+
+  try {
+    await fetch("https://formsubmit.co/qrcodekosovaa@gmail.com", {
+      method: "POST",
+      body: formData
+    });
+
+    window.location.href = "thankyou.html";
+
+  } catch (err) {
+    showToast("Gabim gjatë dërgimit!", true);
+  }
 });
 
 // ---------- Year ----------
