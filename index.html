@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grünwerkxani · Hausmeister </title>
+  <meta name="description" content="Hausmeister & Landschaftsgestaltung në Attendorn. Dizajn kopshtesh, gjelbërim, mbjellje, shtigje dhe shërbime të plota Hausmeister. Kontakto për ofertë falas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header id="navbar">
+    <nav class="nav container">
+      <a href="#home" class="brand">
+        <img src="assets/logo.jpeg" alt="Grünwerk Xani — Garten- & Landschaftspflege" class="brand-logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#rreth">Rreth Nesh</a></li>
+        <li><a href="#sherbimet">Shërbimet</a></li>
+        <li><a href="#projekte">Projekte</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <a href="#kontakt" class="btn btn-primary nav-cta">Kontakto tani</a>
+      <button id="menu-toggle" aria-label="Menu">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      </button>
+    </nav>
+    <div id="mobile-menu">
+      <a href="#home">Home</a>
+      <a href="#rreth">Rreth Nesh</a>
+      <a href="#sherbimet">Shërbimet</a>
+      <a href="#projekte">Projekte</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#kontakt" class="btn btn-primary">Kontakto tani</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <img src="assets/hero.jpg" alt="Kopsht i mirëmbajtur me bar të gjelbër dhe shtëpi moderne" class="hero-bg" />
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="badge">Hausmeister &amp; Landschaftsgestaltung · Attendorn</p>
+      <h1>Kopshte që frymëzojnë, mirëmbajtje që frymëzon besim</h1>
+      <p class="hero-sub">Dizajnojmë, gjelbërojmë dhe kujdesemi për hapësirat tuaja të jashtme me profesionalizëm dhe pasion gjerman për detajet.</p>
+      <div class="hero-actions">
+        <a href="#kontakt" class="btn btn-primary">Kontakto tani →</a>
+        <a href="tel:+491629108757" class="btn btn-ghost">📞 +49 162 9108757</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="rreth" class="section">
+    <div class="container grid-2 about">
+      <div class="reveal about-img">
+        <img src="assets/about.jpg" alt="Punëtor profesional duke mirëmbajtur gardhin e gjelbër" loading="lazy" />
+      </div>
+      <div class="reveal">
+        <p class="eyebrow">Rreth Nesh</p>
+        <h2>Partneri juaj i besueshëm për hapësira të gjelbra</h2>
+        <p class="muted">Jemi një kompani familjare me bazë në Attendorn, e specializuar në dizajnimin e kopshteve, gjelbërimin dhe shërbimet e plota të Hausmeister. Çdo projekt e trajtojmë me kujdes maksimal, duke kombinuar estetikën me funksionalitetin dhe qëndrueshmërinë.</p>
+        <ul class="checklist">
+          <li>Mbi 10 vjet përvojë në landscaping &amp; mirëmbajtje</li>
+          <li>Ekip i kualifikuar dhe i pajisur profesionalisht</li>
+          <li>Materiale cilësore dhe punë e garantuar</li>
+          <li>Çmime transparente dhe afate të respektuara</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="sherbimet" class="section section-alt">
+    <div class="container">
+      <div class="reveal section-head">
+        <p class="eyebrow">Shërbimet</p>
+        <h2>Çfarë ofrojmë për ju</h2>
+        <p class="muted">Nga dizajni i kopshtit te mirëmbajtja e përditshme — një partner i vetëm për të gjitha nevojat tuaja.</p>
+      </div>
+      <div class="cards" id="services-grid"></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projekte" class="section">
+    <div class="container">
+      <div class="reveal section-head">
+        <p class="eyebrow">Projekte</p>
+        <h2>Punët tona të fundit</h2>
+        <p class="muted">Disa nga projektet që tregojnë cilësinë dhe kujdesin tonë për detajet.</p>
+      </div>
+      <div class="projects" id="projects-grid"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="kontakt" class="section section-alt">
+    <div class="container grid-2">
+      <div class="reveal">
+        <p class="eyebrow">Kontakt</p>
+        <h2>Le të bisedojmë për projektin tuaj</h2>
+        <p class="muted">Na shkruani ose telefononi — ju kthejmë përgjigje sa më shpejt me një ofertë pa pagesë.</p>
+        <div class="contact-list">
+          <div class="contact-item"><span class="ci-icon">✉</span><div><p class="muted sm">Email</p><a href="mailto:ekrem-xani@outlook.de">ekrem-xani@outlook.de</a></div></div>
+          <div class="contact-item"><span class="ci-icon">📞</span><div><p class="muted sm">Telefon</p><a href="tel:+491629108757">+49 162 9108757</a></div></div>
+          <div class="contact-item"><span class="ci-icon">📍</span><div><p class="muted sm">Lokacioni</p><p class="strong">57439 Attendorn, Gjermani</p></div></div>
+        </div>
+      </div>
+     <form action="https://formsubmit.co/orhanbajraktari3@gmail.com" method="POST" id="contact-form" class="reveal card form">
+
+  <div class="field">
+    <label for="name">Emri</label>
+    <input id="name" name="name" type="text" maxlength="100" placeholder="Emri juaj" required>
+  </div>
+
+  <div class="field">
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" maxlength="255" placeholder="email@shembull.de">
+  </div>
+
+  <div class="field">
+    <label for="phone">Numri i Telefonit</label>
+    <input id="phone" name="phone" type="tel" maxlength="30" placeholder="+49 123 456789">
+  </div>
+
+  <div class="field">
+    <label for="message">Mesazhi</label>
+    <textarea id="message" name="message" rows="5" maxlength="1000" placeholder="Si mund t'ju ndihmojmë?" required></textarea>
+  </div>
+
+  <input type="hidden" name="_subject" value="Mesazh i ri nga faqja">
+  <input type="hidden" name="_captcha" value="false">
+
+  <button type="submit" class="btn btn-primary full">
+    Dërgo mesazhin →
+  </button>
+
+</form>
+
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container grid-3 footer-grid">
+      <div>
+        <div class="brand footer-brand">
+          <img src="assets/logo.jpeg" alt="Grünwerk Xani" class="brand-logo footer-logo" />
+        </div>
+        <p class="footer-text">Hausmeister &amp; Landschaftsgestaltung — kopshte të bukura dhe mirëmbajtje e besueshme në Attendorn dhe rrethina.</p>
+      </div>
+      <div>
+        <h4>Lidhje</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#rreth">Rreth Nesh</a></li>
+          <li><a href="#sherbimet">Shërbimet</a></li>
+          <li><a href="#projekte">Projekte</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:ekrem-xani@outlook.de">✉ ekrem-xani@outlook.de</a></li>
+          <li><a href="tel:+491629108757">📞 +49 162 9108757</a></li>
+          <li>📍 57439 Attendorn, Gjermani</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> GrünMeister · Hausmeister &amp; Landschaftsgestaltung</div>
+  </footer>
+
+  <div id="toast"></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
