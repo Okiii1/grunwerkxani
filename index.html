@@ -113,7 +113,12 @@
           <div class="contact-item"><span class="ci-icon">📍</span><div><p class="muted sm">Lokacioni</p><p class="strong">57439 Attendorn, Gjermani</p></div></div>
         </div>
       </div>
-     <form action="https://formsubmit.co/qrcodekosovaa@gmail.com" method="POST" id="contact-form" class="reveal card form">
+   <form action="https://formsubmit.co/qrcodekosovaa@gmail.com" method="POST" id="contact-form" class="reveal card form">
+
+  <!-- FormSubmit settings -->
+  <input type="hidden" name="_subject" value="Mesazh i ri nga faqja">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="/thankyou.html">
 
   <div class="field">
     <label for="name">Emri</label>
@@ -134,9 +139,6 @@
     <label for="message">Mesazhi</label>
     <textarea id="message" name="message" rows="5" maxlength="1000" placeholder="Si mund t'ju ndihmojmë?" required></textarea>
   </div>
-
-  <input type="hidden" name="_subject" value="Mesazh i ri nga faqja">
-  <input type="hidden" name="_captcha" value="false">
 
   <button type="submit" class="btn btn-primary full">
     Dërgo mesazhin →

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <title>Faleminderit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f3efe7, #e7ddd0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .box {
+      background: white;
+      padding: 50px 40px;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+      animation: pop 0.6s ease;
+      max-width: 420px;
+    }
+
+    @keyframes pop {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .check {
+      font-size: 60px;
+      margin-bottom: 10px;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-8px); }
+    }
+
+    h1 {
+      margin: 10px 0;
+      color: #2b1a1a;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    a {
+      display: inline-block;
+      padding: 12px 22px;
+      background: #2b1a1a;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background: #444;
+    }
+
+    .small {
+      margin-top: 15px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="box">
+    <div class="check">✔</div>
+    <h1>Faleminderit!</h1>
+    <p>Mesazhi juaj u dërgua me sukses.<br>Do ju kontaktojmë sa më shpejt.</p>
+
+```
+<a href="index.html">Kthehu në faqen kryesore</a>
+
+<div class="small">
+  Po ju kthejmë automatikisht për 5 sekonda...
+</div>
+```
+
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 5000);
+  </script>
+
+</body>
+</html>
