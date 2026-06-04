@@ -52,11 +52,13 @@ h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:700}
 #navbar.scrolled .nav-links{color:var(--foreground)}
 .nav-links a:hover{color:var(--primary-glow)}
 .nav-cta{padding:.55rem 1.3rem;font-size:.9rem}
-#menu-toggle{display:none;background:none;border:none;color:#fff;cursor:pointer}
+#menu-toggle{display:none;background:none;border:none;color:#fff;cursor:pointer;padding:.4rem;line-height:0;border-radius:8px}
 #navbar.scrolled #menu-toggle{color:var(--foreground)}
-#mobile-menu{display:none;flex-direction:column;gap:.25rem;background:var(--background);border-top:1px solid var(--border);padding:1rem 20px}
-#mobile-menu a{padding:.7rem 0;font-weight:500}
-#mobile-menu.open{display:flex}
+#mobile-menu{display:flex;flex-direction:column;gap:.25rem;background:var(--background);border-top:1px solid var(--border);padding:0 20px;max-height:0;overflow:hidden;opacity:0;transition:max-height .35s ease,opacity .25s ease,padding .35s ease;box-shadow:0 12px 24px -12px rgba(0,0,0,.25)}
+#mobile-menu a{padding:.85rem .25rem;font-weight:500;color:var(--foreground);border-bottom:1px solid var(--border)}
+#mobile-menu a:last-child{border-bottom:none}
+#mobile-menu .btn{margin-top:.75rem;justify-content:center;text-align:center}
+#mobile-menu.open{max-height:420px;opacity:1;padding:1rem 20px}
 
 /* Hero */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center}
@@ -96,8 +98,11 @@ h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:700}
 .project{position:relative;overflow:hidden;border-radius:var(--radius);box-shadow:var(--shadow-card)}
 .project img{width:100%;height:260px;object-fit:cover;transition:transform .5s}
 .project:hover img{transform:scale(1.1)}
+.project.active img{transform:scale(1.1)}
+.project{cursor:pointer}
 .project-info{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:1.2rem;background:linear-gradient(to top,rgba(20,30,24,.85),rgba(20,30,24,.05),transparent);color:#fff;opacity:0;transition:opacity .3s}
 .project:hover .project-info{opacity:1}
+.project.active .project-info{opacity:1}
 .project-info .tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.8)}
 .project-info h3{font-size:1.1rem}
 
