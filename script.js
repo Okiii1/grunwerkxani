@@ -62,14 +62,32 @@ function showToast(msg, isError) {
 
 // ---------- Contact form ----------
 document.getElementById("contact-form").addEventListener("submit", (e) => {
-  e.preventDefault();
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
   const message = document.getElementById("message").value.trim();
-  if (!name || !email || !message) { showToast("Ju lutemi plotësoni të gjitha fushat.", true); return; }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showToast("Ju lutemi shkruani një email të vlefshëm.", true); return; }
-  showToast("Faleminderit! Mesazhi juaj u dërgua me sukses.");
-  e.target.reset();
+
+  // validate fields
+  if (!name || !message) {
+    e.preventDefault();
+    showToast("Ju lutemi plotësoni emrin dhe mesazhin.", true);
+    return;
+  }
+
+  if (!email && !phone) {
+    e.preventDefault();
+    showToast("Plotësoni email ose numrin e telefonit.", true);
+    return;
+  }
+
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    e.preventDefault();
+    showToast("Email i pavlefshëm.", true);
+    return;
+  }
+
+  // ❗ MOS e ndal submit nëse gjithçka është OK
+  showToast("Duke dërguar mesazhin...");
 });
 
 // ---------- Year ----------
