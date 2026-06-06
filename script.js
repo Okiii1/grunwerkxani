@@ -92,7 +92,10 @@ document.getElementById("contact-form").addEventListener("submit", async (e) => 
     return;
   }
 
-  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (
+    email &&
+    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+  ) {
     showToast("Email i pavlefshëm.", true);
     return;
   }
@@ -100,12 +103,21 @@ document.getElementById("contact-form").addEventListener("submit", async (e) => 
   const formData = new FormData(e.target);
 
   try {
-    await fetch("https://formsubmit.co/orhanbajraktari3@gmail.com", {
-      method: "POST",
-      body: formData
-    });
+    showToast("Duke dërguar mesazhin...");
 
-    window.location.href = "thankyou.html";
+    const response = await fetch(
+      "https://formsubmit.co/orhanbajraktari3@gmail.com",
+      {
+        method: "POST",
+        body: formData
+      }
+    );
+
+    if (response.ok) {
+      window.location.href = "thankyou.html";
+    } else {
+      showToast("Gabim gjatë dërgimit!", true);
+    }
 
   } catch (err) {
     showToast("Gabim gjatë dërgimit!", true);

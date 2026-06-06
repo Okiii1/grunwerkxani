@@ -120,22 +120,48 @@
 
   <div class="field">
     <label for="name">Emri</label>
-    <input id="name" name="name" type="text" required>
+    <input
+      id="name"
+      name="name"
+      type="text"
+      maxlength="100"
+      placeholder="Emri juaj"
+      required
+    >
   </div>
 
   <div class="field">
     <label for="email">Email</label>
-    <input id="email" name="email" type="email">
+    <input
+      id="email"
+      name="email"
+      type="email"
+      maxlength="255"
+      placeholder="email@shembull.de"
+    >
   </div>
 
   <div class="field">
     <label for="phone">Numri i Telefonit</label>
-    <input id="phone" name="phone" type="tel">
+    <input
+      id="phone"
+      name="phone"
+      type="tel"
+      maxlength="30"
+      placeholder="+49 123 456789"
+    >
   </div>
 
   <div class="field">
     <label for="message">Mesazhi</label>
-    <textarea id="message" name="message" required></textarea>
+    <textarea
+      id="message"
+      name="message"
+      rows="5"
+      maxlength="1000"
+      placeholder="Si mund t'ju ndihmojmë?"
+      required
+    ></textarea>
   </div>
 
   <button type="submit" class="btn btn-primary full">
