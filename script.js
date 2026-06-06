@@ -92,37 +92,46 @@ document.getElementById("contact-form").addEventListener("submit", async (e) => 
     return;
   }
 
-  if (
-    email &&
-    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-  ) {
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     showToast("Email i pavlefshëm.", true);
     return;
   }
-
-  const formData = new FormData(e.target);
 
   try {
     showToast("Duke dërguar mesazhin...");
 
     const response = await fetch(
-      "https://formsubmit.co/orhanbajraktari3@gmail.com",
+      "https://formsubmit.co/ajax/orhanbajraktari3@gmail.com",
       {
         method: "POST",
-        body: formData
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          message,
+          _subject: "Mesazh i ri nga kontakti",
+          _template: "table",
+          _captcha: "false"
+        })
       }
     );
 
-    if (response.ok) {
+    const data = await response.json().catch(() => ({}));
+
+    if (response.ok && (data.success === "true" || data.success === true)) {
       window.location.href = "thankyou.html";
     } else {
       showToast("Gabim gjatë dërgimit!", true);
     }
-
   } catch (err) {
     showToast("Gabim gjatë dërgimit!", true);
   }
 });
+
 
 // ---------- Year ----------
 document.getElementById("year").textContent = new Date().getFullYear();
