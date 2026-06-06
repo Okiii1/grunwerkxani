@@ -101,7 +101,7 @@ document.getElementById("contact-form").addEventListener("submit", async (e) => 
     showToast("Duke dërguar mesazhin...");
 
     const response = await fetch(
-      "https://formsubmit.co/ajax/orhanbajraktari3@gmail.com",
+      "https://formsubmit.co/ajax/ekrem-xani@outlook.de",
       {
         method: "POST",
         headers: {
