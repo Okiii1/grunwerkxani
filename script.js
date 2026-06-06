@@ -9,17 +9,30 @@ const services = [
 ];
 
 const projects = [
-  { img: "assets/project-1.jpg", title: "Gehweg-Verlegung", tag: "Shtigje me gurë" },
-  { img: "assets/project-2.jpg", title: "Blumenbeet", tag: "Mbjellje lulesh" },
-  { img: "assets/project-3.jpg", title: "Rasenpflege", tag: "Mirëmbajtje bari" },
-  { img: "assets/project-4.jpg", title: "Hofdekoration", tag: "Dekorim oborri" },
+  { img: "assets/project-1.jpg", title: "", tag: " "  },
+  { img: "assets/project-2.jpg", title: "", tag: " " },
+  { img: "assets/project-3.jpg", title: "", tag: " " },
+  { img: "assets/project-4.jpg", title: "", tag: " " },
+  { img: "assets/project-5.jpeg", title: "", tag: " " },
+  { img: "assets/project-6.jpeg", title: "", tag: " " },
+  { img: "assets/project-7.jpeg", title: "", tag: " " },
+  { img: "assets/project-9.jpeg", title: "", tag: " " },
+  { img: "assets/project-8.jpeg", title: "", tag: " " },
+  { img: "assets/project-10.jpeg", title: "", tag: " " },
+  { img: "assets/project-11.jpeg", title: "", tag: " " },
+  { img: "assets/project-12.jpeg", title: "", tag: " " },
+
+
 ];
+
+
 
 // ---------- Render ----------
 document.getElementById("services-grid").innerHTML = services.map((s, i) => `
   <div class="card service reveal" style="transition-delay:${i * 60}ms">
     <div class="icon">${s.icon}</div>
     <h3>${s.title}</h3>
+
     <p class="muted">${s.desc}</p>
   </div>`).join("");
 
@@ -87,7 +100,7 @@ document.getElementById("contact-form").addEventListener("submit", async (e) => 
   const formData = new FormData(e.target);
 
   try {
-    await fetch("https://formsubmit.co/qrcodekosovaa@gmail.com", {
+    await fetch("https://formsubmit.co/ekrem-xani@outlook.de", {
       method: "POST",
       body: formData
     });
