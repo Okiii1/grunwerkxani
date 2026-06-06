@@ -100,7 +100,7 @@ document.getElementById("contact-form").addEventListener("submit", async (e) => 
   const formData = new FormData(e.target);
 
   try {
-    await fetch("https://formsubmit.co/ekrem-xani@outlook.de", {
+    await fetch("https://formsubmit.co/orhanbajraktari3@gmail.com", {
       method: "POST",
       body: formData
     });
