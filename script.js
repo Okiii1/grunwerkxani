@@ -1,11 +1,11 @@
 // ---------- Data ----------
 const services = [
-  { icon: "🌳", title: "Landschaftsgestaltung", desc: "Planifikim dhe dizajn i kompletuar i kopshteve dhe hapësirave të jashtme." },
-  { icon: "🌼", title: "Pflanzung von Blumen & Bäumen", desc: "Mbjellje profesionale e luleve, shkurreve dhe pemëve sipas stinës." },
-  { icon: "🌱", title: "Begrünung & Pflege", desc: "Gjelbërim dhe mirëmbajtje e rregullt për bar dhe bimë gjatë gjithë vitit." },
-  { icon: "🪨", title: "Gehweg-Verlegung", desc: "Vendosje e shtigjeve dhe rrugicave me gurë dhe pllaka cilësore." },
-  { icon: "🏡", title: "Hofdekoration", desc: "Dekorim dhe rregullim i oborreve për një ambient të ngrohtë e elegant." },
-  { icon: "🔧", title: "Hausmeisterservice", desc: "Shërbime të plota Hausmeister për prona, ndërtesa dhe hapësira të përbashkëta." },
+  { icon: "🌳", title: "Landschaftsgestaltung", desc: "Komplette Planung und Gestaltung von Gärten und Außenanlagen." },
+  { icon: "🌼", title: "Pflanzung von Blumen & Bäumen", desc: "Professionelle Pflanzung von Blumen, Sträuchern und Bäumen je nach Jahreszeit." },
+  { icon: "🌱", title: "Begrünung & Pflege", desc: "Begrünung und regelmäßige Pflege von Rasen und Pflanzen das ganze Jahr über." },
+  { icon: "🪨", title: "Gehweg-Verlegung", desc: "Verlegung von Wegen und Gehsteigen mit hochwertigen Steinen und Platten." },
+  { icon: "🏡", title: "Hofdekoration", desc: "Gestaltung und Dekoration von Höfen für eine warme und elegante Umgebung." },
+  { icon: "🔧", title: "Hausmeisterservice", desc: "Umfassende Hausmeisterdienste für Immobilien, Gebäude und Gemeinschaftsflächen." },
 ];
 
 const projects = [
